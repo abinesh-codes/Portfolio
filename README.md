@@ -1,23 +1,70 @@
+# Abinesh R — Portfolio Website
 
-Here's a simple and user-friendly README for your GitHub profile based on the code you provided:
+A premium personal portfolio built with React.js, Framer Motion, and Bootstrap.
 
-**Personal Portfolio Website**
-Welcome to my personal portfolio website! This website showcases my skills, services, and work. It's built with HTML, CSS, and JavaScript, and it provides a clear and visually appealing way to present information about myself, the services I offer, and how to get in touch with me.
+## 🚀 Quick Start
 
-**Features**
-Home Page: An introduction to who I am with a brief description and a background image.
-About Me: A section where you can learn more about my skills, experience, and education through interactive tabs.
-Services: A section detailing the services I offer, including web design, UI/UX design, and app design.
-Portfolio: A showcase of my work with clickable images that reveal more details.
-Contact: A form to send me a message directly and links to my social media profiles.
+```bash
+npm install
+npm start
+```
 
-**Technologies Used**
+## 📸 Adding Your Photo
 
-HTML: Used to structure the content on the website.
-CSS: Used to style the website and make it responsive across various screen sizes.
-JavaScript: Adds interactivity such as switching between tabs in the "About Me" section and opening/closing the side menu.
-Google Forms: The contact form is connected to a Google Sheets script, allowing messages to be submitted directly.
+1. Copy your photo (`IMG_20260530_123235.jpg`) into `src/assets/` 
+2. The Hero section will automatically display it
 
+## 🌐 Deploy to Vercel
 
-Connecting to Google Sheet
-" https://github.com/jamiewilson/form-to-google-sheets.git" Follow this link to connect with the google sheet
+1. Push to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/abinesh-codes/portfolio.git
+git push -u origin main
+```
+
+2. Go to [vercel.com](https://vercel.com) → New Project → Import from GitHub
+3. Select the repository → Deploy (no config needed, `vercel.json` handles routing)
+
+## 📬 Enable EmailJS (Contact Form)
+
+1. Sign up at [emailjs.com](https://emailjs.com)
+2. Create a service & template
+3. In `src/components/Contact.jsx`, replace the setTimeout simulation with:
+```js
+import emailjs from 'emailjs-com';
+emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form, 'YOUR_USER_ID');
+```
+
+## 📁 Structure
+
+```
+src/
+  components/
+    Navbar.jsx
+    Hero.jsx
+    About.jsx
+    Skills.jsx
+    Projects.jsx
+    Experience.jsx
+    Education.jsx
+    Certifications.jsx
+    Contact.jsx
+    Footer.jsx
+    ProfilePhoto.jsx
+  assets/
+    abinesh.jpg  ← Add your photo here
+  index.css
+  App.js
+  index.js
+```
+
+## 🎨 Tech Stack
+- React.js 18
+- Framer Motion (animations)
+- Bootstrap 5 (grid/layout)
+- React Icons
+- React Scroll (smooth navigation)
+- Space Grotesk + Syne (Google Fonts)
