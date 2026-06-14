@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 
-// Import the photo - it should be at src/assets/abinesh.jpg
-let photo;
-try {
-  photo = require('../assets/abinesh.png');
-} catch(e) {
-  photo = null;
-}
+// Import the photo
+import photo from '../assets/abinesh.png';
 
 export default function ProfilePhoto({ size = 320, style = {} }) {
   const [imgError, setImgError] = useState(false);

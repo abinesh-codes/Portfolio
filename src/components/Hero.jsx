@@ -81,8 +81,8 @@ export default function Hero() {
               </motion.p>
 
               <motion.div variants={item} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
-                <a href="mailto:abinesh1471@gmail.com" className="btn-primary-custom">
-                  <FiMail /> Get In Touch <FiArrowRight size={14} />
+                <a href="https://linkedin.com/in/abineshr25" target="_blank" rel="noreferrer" className="btn-primary-custom">
+                  <FiLinkedin /> Get In Touch <FiArrowRight size={14} />
                 </a>
                 <a href={resumePdf} download="Abinesh_CV.pdf" className="btn-outline-custom">
                   <FiDownload /> Download CV
